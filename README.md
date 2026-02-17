@@ -19,6 +19,7 @@ mvnw spring-boot:run
 
 ## Apri un altro terminale nella cartella `nasa-angular/nasa-apod-frontend`:
 cd nasa-angular
+cd nasa-apod-frontend
 npm install
 ng serve
 
