@@ -13,7 +13,7 @@ Frontend in **Angular Standalone**, backend in **Spring Boot (Java)**.
 - Gestione sicura della chiave API lato backend.
 
 ## Apri un terminale nella cartella e avvia:
-./mvnw spring-boot:run
+mvnw spring-boot:run
 
 (L’API sarà disponibile su: http://localhost:8080/apod/random)
 
