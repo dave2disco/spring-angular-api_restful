@@ -1,0 +1,36 @@
+<div *ngIf="apod() as data" style="text-align:center; margin: 20px;">
+  <h1>{{ title() }}</h1>
+  <h2>{{ data.title }}</h2>
+  
+  <!-- Mostra immagine -->
+  <img *ngIf="data.media_type === 'image'" 
+       [src]="data.url" 
+       [alt]="data.title" 
+       style="max-width: 90%; height: auto; border-radius: 8px; margin: 10px 0;">
+
+  <!-- Mostra video -->
+  <iframe *ngIf="data.media_type === 'video'" 
+          [src]="data.url | safeUrl" 
+          width="640" 
+          height="360" 
+          frameborder="0" 
+          allowfullscreen>
+  </iframe>
+
+  <p style="max-width: 800px; margin: 10px auto; text-align: justify;">
+    {{ data.explanation }}
+  </p>
+
+  <p *ngIf="data.copyright">
+    © {{ data.copyright }}
+  </p>
+
+  <button (click)="loadAPOD()" 
+          style="padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; margin-top: 15px;">
+    Visualizza casuale
+  </button>
+</div>
+
+<div *ngIf="!apod()" style="text-align:center; margin: 20px;">
+  Caricamento in corso...
+</div>
