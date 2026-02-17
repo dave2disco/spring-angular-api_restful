@@ -18,9 +18,9 @@ mvnw spring-boot:run
 (L’API sarà disponibile su: http://localhost:8080/apod/random)
 
 ## Apri un altro terminale nella cartella `nasa-angular/nasa-apod-frontend`:
-cd nasa-angular
-cd nasa-apod-frontend
-npm install
+cd nasa-angular <br />
+cd nasa-apod-frontend <br />
+npm install <br />
 ng serve
 
 (L’app sarà disponibile su: http://localhost:4200)
